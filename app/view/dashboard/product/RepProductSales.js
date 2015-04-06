@@ -11,6 +11,11 @@ Ext.define("SalesApp.view.dashboard.product.RepProductSales",{
 
     store: 'RepProductSalesStore',
 
+    features: [{
+        ftype: 'summary',
+        dock: 'bottom'
+    }],
+
     columns: {
     	defaults: {
     		sortable: true
@@ -18,7 +23,10 @@ Ext.define("SalesApp.view.dashboard.product.RepProductSales",{
     	items: [{
     		text: 'Product',
     		dataIndex: 'product_name',
-    		flex: 4
+    		flex: 4,
+            summaryRenderer: function() {
+                return 'Total';
+            }
     	},{
     		text: '40%+ Opportunities',
     		defaults: {
@@ -29,19 +37,31 @@ Ext.define("SalesApp.view.dashboard.product.RepProductSales",{
     			dataIndex: 'opp_budget_amount',
     			renderer: function(val) {
     				return Ext.util.Format.usMoney(val);
-    			}
+    			},
+                summaryType: 'sum',
+                summaryRenderer: function(val, summaryData, dataIndex) {
+                    return Ext.util.Format.usMoney(val);
+                }
     		},{
     			text: 'Actual',
     			dataIndex: 'opp_actual_amount',
     			renderer: function(val) {
     				return Ext.util.Format.usMoney(val);
-    			}
+    			},
+                summaryType: 'sum',
+                summaryRenderer: function(val, summaryData, dataIndex) {
+                    return Ext.util.Format.usMoney(val);
+                }
     		},{
     			text: 'Var',
     			dataIndex: 'opp_var_percent',
     			renderer: function(val) {
     				return val + '%';
-    			}
+    			},
+                summaryType: 'average',
+                summaryRenderer: function(val, summaryData, dataIndex) {
+                    return Ext.util.Format.round(val, 2) + '%';
+                }
     		}]
     	},{
     		text: 'Sales',
@@ -53,19 +73,31 @@ Ext.define("SalesApp.view.dashboard.product.RepProductSales",{
     			dataIndex: 'sales_budget_amount',
     			renderer: function(val) {
     				return Ext.util.Format.usMoney(val);
-    			}
+    			},
+                summaryType: 'sum',
+                summaryRenderer: function(val, summaryData, dataIndex) {
+                    return Ext.util.Format.usMoney(val);
+                }
     		},{
     			text: 'Actual',
     			dataIndex: 'sales_actual_amount',
     			renderer: function(val) {
     				return Ext.util.Format.usMoney(val);
-    			}
+    			},
+                summaryType: 'sum',
+                summaryRenderer: function(val, summaryData, dataIndex) {
+                    return Ext.util.Format.usMoney(val);
+                }
     		},{
     			text: 'Var',
     			dataIndex: 'sales_var_percent',
     			renderer: function(val) {
     				return val + '%';
-    			}
+    			},
+                summaryType: 'average',
+                summaryRenderer: function(val, summaryData, dataIndex) {
+                    return Ext.util.Format.round(val, 2) + '%';
+                }
     		}]
     	}]
     }
