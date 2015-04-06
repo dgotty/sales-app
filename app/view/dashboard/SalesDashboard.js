@@ -42,9 +42,8 @@ Ext.define("SalesApp.view.dashboard.SalesDashboard",{
     		}]
     	}],
     	items: [{
-    		xtype: 'panel',
-    		title: 'Product',
-    		html: 'product goes here'
+    		xtype: 'rep-product-sales',
+    		title: 'Product'
     	},{
     		xtype: 'panel',
     		title: 'State',
