@@ -8,7 +8,11 @@ Ext.application({
 
     extend: 'SalesApp.Application',
     
-    autoCreateViewport: 'SalesApp.view.main.Main'
+    autoCreateViewport: 'SalesApp.view.main.Main',
+
+    requires: [
+        'SalesApp.*'
+    ]
 	
     //-------------------------------------------------------------------------
     // Most customizations should be made to SalesApp.Application. If you need to

@@ -9,8 +9,6 @@ Ext.define("SalesApp.view.dashboard.SalesDashboard",{
 
     xtype: 'sales-dashboard',
 
-    requires: ['SalesApp.view.dashboard.RsmSales'],
-
     layout: {
     	type: 'vbox',
     	align: 'stretch'
@@ -28,9 +26,8 @@ Ext.define("SalesApp.view.dashboard.SalesDashboard",{
     		title: 'RSM Sales',
     		flex: 1
     	},{
-    		xtype: 'panel',
+    		xtype: 'rsm-opp-chart',
     		title: 'Chart Panel',
-    		html: 'chart goes here',
     		flex: 1
     	}]
     },{

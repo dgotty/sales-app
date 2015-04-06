@@ -5,7 +5,6 @@
  */
 Ext.define('SalesApp.store.RsmStore', {
     extend: 'Ext.data.JsonStore',
-    requires: ['SalesApp.model.RsmModel'],
     model: 'SalesApp.model.RsmModel',
     storeId: 'RsmStore',
     data: [{
