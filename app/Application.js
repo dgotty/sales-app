@@ -11,7 +11,8 @@ Ext.define('SalesApp.Application', {
     stores: [
         // TODO: add global / shared stores here
         'RsmStore',
-        'RepProductSalesStore'
+        'RepProductSalesStore',
+        'SaleCycleStore'
     ],
     
     launch: function () {

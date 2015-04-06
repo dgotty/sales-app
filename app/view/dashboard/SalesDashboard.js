@@ -37,9 +37,19 @@ Ext.define("SalesApp.view.dashboard.SalesDashboard",{
     		xtype: 'toolbar',
     		dock: 'top',
     		items: [{
-    			xtype: 'button',
-    			text: 'Filter components go here'
-    		}]
+    			xtype: 'combo',
+    			store: 'SaleCycleStore',
+                queryMode: 'local',
+                displayField: 'sale_cycle_name',
+                valueField: 'sale_cycle_id',
+                value: 5
+    		},'-',{
+                xtype: 'combo',
+                store: 'RsmStore',
+                queryMode: 'local',
+                displayField: 'first_name',
+                valueField: 'id'
+            }]
     	}],
     	items: [{
     		xtype: 'rep-product-sales',

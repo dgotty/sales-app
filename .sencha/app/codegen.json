@@ -280,6 +280,18 @@
         "modelNamespace": "SalesApp.model",
         "name": "ProductSale"
       }
+    },
+    "app/model/SaleCycle.js": {
+      "source": "{modelFileName}.js.tpl.merge",
+      "version": "31d5356142a167c72422f7902f19df3c583f3249",
+      "parameters": {
+        "appName": "SalesApp",
+        "baseClass": "Ext.data.Model",
+        "fields": "sale_cycle_name:auto:null,sale_cycle_id:auto:null",
+        "modelFileName": "SaleCycle",
+        "modelNamespace": "SalesApp.model",
+        "name": "SaleCycle"
+      }
     }
   }
 }
