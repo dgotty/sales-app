@@ -9,6 +9,8 @@ Ext.define("SalesApp.view.dashboard.SalesDashboard",{
 
     xtype: 'sales-dashboard',
 
+    requires: ['SalesApp.view.dashboard.RsmSales'],
+
     layout: {
     	type: 'vbox',
     	align: 'stretch'

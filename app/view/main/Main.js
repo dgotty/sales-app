@@ -9,7 +9,8 @@ Ext.define('SalesApp.view.main.Main', {
     extend: 'Ext.container.Container',
     requires: [
         'SalesApp.view.main.MainController',
-        'SalesApp.view.main.MainModel'
+        'SalesApp.view.main.MainModel',
+        'SalesApp.view.dashboard.SalesDashboard'
     ],
 
     xtype: 'app-main',

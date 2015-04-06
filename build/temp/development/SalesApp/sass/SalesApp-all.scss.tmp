@@ -898,6 +898,8 @@ $include-ext-window-messagebox: true;
 $include-ext-window-toast: true;
 $include-ext-window-window: true;
 $include-salesapp-application: true;
+$include-salesapp-model-rsmmodel: true;
+$include-salesapp-store-rsmstore: true;
 $include-salesapp-view-dashboard-rsmsales: true;
 $include-salesapp-view-dashboard-rsmsalescontroller: true;
 $include-salesapp-view-dashboard-rsmsalesmodel: true;
